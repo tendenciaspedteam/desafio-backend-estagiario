@@ -20,7 +20,7 @@ O objetivo deste desafio é implementar uma classe em Python chamada `AnaliseNum
 
 2. **Adicionar Números:**
 
-   - Implemente um método `addNum` que recebe um número como parâmetro e adiciona esse número à lista de números da classe, garantindo que a lista continue ordenada após cada adição. **Importante:** Implemente sua própria função de ordenação para manter a lista ordenada, sem utilizar métodos de ordenação embutidos do Python (como `sort()` ou `sorted()`).
+   - Implemente um método `addNum` que recebe um número como parâmetro e adiciona esse número à lista de números da classe, garantindo que a lista continue ordenada após cada adição. **Importante:** Implemente alguma função de ordenação para manter a lista ordenada, como por exemplo um mergesort, sem utilizar métodos de ordenação embutidos do Python (como `sort()` ou `sorted()`).
 
 3. **Calcular Mediana:**
 
@@ -35,6 +35,5 @@ O objetivo deste desafio é implementar uma classe em Python chamada `AnaliseNum
 
 #### Observações:
 
-- **Otimização da Inserção:** Embora a inserção em uma lista ordenada possa ter uma complexidade de tempo $O(n)$devido à necessidade de deslocar elementos, é possível localizar a posição de inserção em $O(\log n)$.
+- **Otimização da Inserção:** Embora a inserção em uma lista ordenada possa ter uma complexidade de tempo $O(n)$ devido à necessidade de deslocar elementos, é possível localizar a posição de inserção em $O(\log n)$.
 - **Otimização do Cálculo da Mediana:** O cálculo da mediana pode ser otimizado para tempo constante $O(1)$ após cada inserção.
-
