@@ -5,35 +5,46 @@
 <h1 align="center">Desafios de Backend</h1>
 <p align = "center">Lista de desafios para o processo seletivo para estagiário de backend</p>
 
-## Desafio 1: Implemente uma classe de análise numérica
+## Desafio 1: Encontre a Mediana
 
 ### Problema
 
-O objetivo deste desafio é implementar uma classe em Python chamada `AnaliseNumerica`. Esta classe será capaz de realizar operações básicas de análise em um conjunto de números, incluindo a adição de novos números ao conjunto e o cálculo da mediana, mantendo o conjunto de números sempre ordenado.
+A mediana é o valor do meio em uma lista ordenada de inteiros. Se o tamanho da lista for par, não há um valor do meio, e a mediana é a média dos dois valores do meio.
 
-### Requisitos do Desafio
+- Por exemplo, para `arr = [2,3,4]`, a mediana é `3`.
+- Por exemplo, para `arr = [2,3]`, a mediana é `(2 + 3) / 2 = 2,5`.
 
-1. **Inicialização da Classe:**
+Implemente a classe `MedianFinder`:
 
-   - A classe `AnaliseNumerica` deve ser inicializada com uma lista de números. Se nenhuma lista for fornecida no momento da inicialização, a classe deve começar com uma lista vazia.
-   - A lista de números deve ser mantida ordenada em ordem crescente desde o início.
+- `MedianFinder()` inicializa o objeto `MedianFinder`.
+- `void addNum(int num)` adiciona o inteiro `num` do fluxo de dados à estrutura de dados.
+- `double findMedian()` retorna a mediana de todos os elementos até o momento. Respostas dentro de 10^-5 da resposta real serão aceitas.
 
-2. **Adicionar Números:**
+**Exemplo 1:**
 
-   - Implemente um método `addNum` que recebe um número como parâmetro e adiciona esse número à lista de números da classe, garantindo que a lista continue ordenada após cada adição. **Importante:** Implemente alguma função de ordenação para manter a lista ordenada, como por exemplo um mergesort, sem utilizar métodos de ordenação embutidos do Python (como `sort()` ou `sorted()`).
+Entrada
+["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]
+[[], [1], [2], [], [3], []]
+Saída
+[null, null, null, 1.5, null, 2.0]
 
-3. **Calcular Mediana:**
+Explicação:
 
-   - Implemente um método `findMedian` que retorna a mediana dos números na lista. A mediana é o valor que separa a metade maior da metade menor da lista. Se a lista for de tamanho par, a mediana deve ser a média dos dois números do meio. Se a lista estiver vazia, o método deve retornar `None`.
+MedianFinder medianFinder = new MedianFinder();
 
-### Instruções para o Candidato
+medianFinder.addNum(1); // arr = [1]
 
-- Seu código deve ser escrito em Python.
-- Assegure-se de que sua classe `AnaliseNumerica` atenda a todos os requisitos acima.
-- Escreva seu código de forma clara e organizada. Comente seu código quando necessário para explicar a lógica utilizada.
-- Após completar a implementação, inclua exemplos de uso da sua classe, demonstrando a adição de números e o cálculo da mediana, mantendo a lista de números ordenada sem utilizar métodos de ordenação embutidos.
+medianFinder.addNum(2); // arr = [1, 2]
 
-#### Observações:
+medianFinder.findMedian(); // retorna 1.5 (ou seja, (1 + 2) / 2)
 
-- **Otimização da Inserção:** Embora a inserção em uma lista ordenada possa ter uma complexidade de tempo $O(n)$ devido à necessidade de deslocar elementos, é possível localizar a posição de inserção em $O(\log n)$.
-- **Otimização do Cálculo da Mediana:** O cálculo da mediana pode ser otimizado para tempo constante $O(1)$ após cada inserção.
+medianFinder.addNum(3); // arr = [1, 2, 3]
+
+medianFinder.findMedian(); // retorna 2.0
+
+
+**Restrições:**
+
+- `-10^5 <= num <= 10^5`
+- Haverá pelo menos um elemento na estrutura de dados antes de chamar `findMedian`.
+- No máximo 5 * 10^4 chamadas serão feitas para `addNum` e `findMedian`.
