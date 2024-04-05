@@ -48,3 +48,13 @@ medianFinder.findMedian(); // retorna 2.0
 - `-10^5 <= num <= 10^5`
 - Haverá pelo menos um elemento na estrutura de dados antes de chamar `findMedian`.
 - No máximo 5 * 10^4 chamadas serão feitas para `addNum` e `findMedian`.
+
+
+## Critérios de avaliação
+
+- Organização do código
+- Boas práticas de programação
+- Os testes devem passar em todos os casos de teste
+
+> [!IMPORTANT]
+> Não modifque os testes unitários, apenas implemente a classe `AnaliseNumerica`.
