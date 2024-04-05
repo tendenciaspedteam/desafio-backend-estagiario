@@ -57,4 +57,4 @@ medianFinder.findMedian(); // retorna 2.0
 - Os testes devem passar em todos os casos de teste
 
 > [!IMPORTANT]
-> Não modifque os testes unitários, apenas implemente a classe `AnaliseNumerica`.
+> Não modifque os testes unitários, apenas implemente a classe `MedianFinder`.
