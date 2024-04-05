@@ -1,4 +1,4 @@
-class AnaliseNumerica:
+class MedianFinder:
     def __init__(self, array: list[int] = None) -> None:
         """
         Inicializa a instância da classe AnaliseNumerica.
